@@ -1,0 +1,48 @@
+@import 'grid';
+@import "variables";
+body{
+  background-color: $color_body;
+}
+.bloque{
+  background-color: $color_nav;
+  &__nav{
+    margin: 12px;
+    &__lista{
+      padding: 15px;
+      color: $color_fuente;
+      }
+    }
+}
+.bloqueImagenes{
+  @extend .bloqueBotones;
+  margin: 20px 0px 20px 0px;
+  &__imagen{
+    border: solid 5px $color_nav;
+    &__cerrar{
+      border-radius: 30%;
+      height: 50%;
+      position: relative;
+      left: -220px;
+      top: 15px;
+      color: $color_body;
+      border: solid 3px $color_nav;
+      }
+   }
+}
+.bloqueBotones{
+  display: flex;
+  justify-content: center;
+  &__boton{
+    width: 70%;
+    height: 50px;
+    background-color: transparentize($color_body, .5);
+    border: solid 5px $color_nav;
+  }
+}
+.informacion{
+  padding: 18px;
+  &__parrafo{
+    text-align: justify;
+    padding:20px;
+  }
+}
